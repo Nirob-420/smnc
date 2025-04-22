@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo-removebg-preview.png" type="image/x-icon" />
-    <title>Sylhet Model Nursing & Midwifery Institute (SMNC)</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <title>Sylhet Model Nursing & Midwifery Institute</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="google-site-verification" content="igC3pR8ccRLwRLY9-4862k3ZbfM0XPIZ0XTUONQhQ00" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
     :root {
@@ -64,6 +63,61 @@
         font-size: 1.6rem;
         transition: all 0.3s ease;
     }
+    .gallery-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.gallery-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.gallery-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.gallery-item {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
 
     .search-box:focus {
         outline: none;
@@ -253,7 +307,8 @@
     }
 
     .feature-card {
-        background: white;
+        background-image: url("https://www.seoclerk.com/pics/want23862-13fpvD1424873482.png");
+        background-size: 300px 150px;
         padding: 3rem;
         border-radius: 2rem;
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -262,6 +317,8 @@
         transition: all 0.8s ease-out;
         position: relative;
         overflow: hidden;
+        color:#000000;
+        font-size: 1.3em;
     }
 
     .feature-card.animate {
@@ -367,6 +424,10 @@
             transition: right 0.3s ease;
             backdrop-filter: blur(10px);
         }
+        .nb{
+          height: 60px;
+          width: 60px;
+        }
 
         .nav-menu.active {
             right: 0;
@@ -430,6 +491,7 @@
         <div class="logo">
             <i class="fas fa-hand-holding-medical"></i>
             SMNMI
+            <img sizes="" srcset="" src="https://smnc.netlify.app/photos/clg%20logo1.png" alt="" class="nb">
         </div>
 
         <div class="search-container">
@@ -596,10 +658,30 @@
             </div>
           </div>
         </section>
+        <section class="gallery-section">
+  <div class="gallery-header">
+    <h2> Gallery</h2>
+
+  </div>
+  <div class="gallery-grid">
+    <img src="https://smnc.netlify.app/photos/academic1.jpeg" alt="Campus 1" class="gallery-item" />
+    <img src="https://smnc.netlify.app/photos/academic3.jpeg" alt="Campus 2" class="gallery-item" />
+    <img src="https://smnc.netlify.app/photos/academic4.jpg" alt="Campus 3" class="gallery-item" />
+    <img src="https://smnc.netlify.app/photos/clg%20(9).jpeg" alt="Campus 4" class="gallery-item" />
+    <img src="https://smnc.netlify.app/photos/clg%20(16).jpeg" alt="Campus 5" class="gallery-item" />
+    <img src="https://smnc.netlify.app/photos/clg%20(21).jpeg" alt="Campus 6" class="gallery-item" />
+  </div>
+  
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Preview" />
+  </div>
+</section>
         </main>
     <footer>
-        <p>© 2023 Sylhet Model Nursing & Midwifery Institute | BNMC Approved</p>
-        <p>Developed by <a href="#" target="_blank">EdTech Solutions</a></p>
+        <p>© 2025 Sylhet Model Nursing & Midwifery Institute |</p>
+        <p>Developed by <a href="https://nirob120.netlify.app/" target="_blank">NIROB</a></p>
     </footer>
 
     <script>
@@ -778,5 +860,6 @@
         });
     });
     </script>
+
 </body>
 </html>
